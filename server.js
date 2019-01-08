@@ -6,6 +6,8 @@
 // hanldbar partials, helper
 // 45:
 // express middleware
+// 48:
+// deploy app to web with heroku web server
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
@@ -70,6 +72,12 @@ app.get('/about',(req, res) => {
   res.render('about.hbs',{
     pageTitle: 'About Page'
     // currentYear: new Date().getFullYear()
+  });
+});
+
+app.get('/project',(req,res)=>{
+  res.render('project.hbs',{
+    pageTitle:'Project page'
   });
 });
 
